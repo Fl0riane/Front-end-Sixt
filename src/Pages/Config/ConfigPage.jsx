@@ -76,9 +76,12 @@ const ConfigPage = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post("http://localhost:3000/offerconfig", {
-          offerId: offerId,
-        });
+        const response = await axios.post(
+          "https://site--back-end-sixt--p2d7k4xwpzzq.code.run/offerconfig",
+          {
+            offerId: offerId,
+          }
+        );
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
