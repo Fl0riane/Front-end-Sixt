@@ -1,0 +1,46 @@
+.modal-root {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(25, 25, 25, 0.8);
+  z-index: 2;
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  margin: 185px auto;
+  height: fit-content;
+  background-color: black;
+  padding: 20px;
+}
+.modal > button {
+  align-items: end;
+}
+.modal div {
+  display: flex;
+  color: white;
+  height: 360px;
+  gap: 20px;
+}
+
+.leftPart {
+  width: 60%;
+}
+.leftPart div {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.rightPart {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+}

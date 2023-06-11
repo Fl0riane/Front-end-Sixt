@@ -1,0 +1,41 @@
+.imgBloc {
+  display: flex;
+  flex-direction: column;
+
+  height: 380px;
+  overflow: hidden;
+  overflow-y: scroll;
+  justify-content: last baseline;
+}
+.imgBloc img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.buttomPart {
+  background-color: #ff5f00;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+.optionsBloc {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  gap: 20px;
+  width: 1000px;
+}
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+  box-sizing: border-box;
+}
+.optionCard {
+  padding: 10px;
+  box-sizing: border-box;
+  width: calc((100% - 20px) / 2);
+  height: 200px;
+  border: 1px solid black;
+}
