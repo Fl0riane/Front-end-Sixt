@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logoSixt from "../assets/img/sixt-logo.png";
 import heroImg from "../assets/img/heroImg.jpeg";
-
+import img2 from "../assets/img/sixt-in-the-world.png";
 import SearchBar from "../Components/SearchBar";
 
 const Home = ({
@@ -106,6 +106,13 @@ const Home = ({
 
       <div className="hero">
         <img src={heroImg} alt="" />
+      </div>
+      <div
+        className="hero"
+        style={{ backgroundColor: "black", color: "white" }}
+      >
+        <h2>LES AGENCES DANS LE MONDE</h2>
+        <img src={img2} alt="" />
       </div>
     </div>
   );

@@ -12,19 +12,11 @@ const SearchBar = ({
   endDate,
   countries,
   onChangeHandler,
-  // onChangeStartDate,
-  // onChangeEndDate,
-  // setCountrytitle,
   countryTitle,
   onSuggestHandler,
   setCountries,
-  // endTime,
-  // starTime,
   setStartDate,
   setEndDate,
-  id,
-  total,
-  setTotal,
 }) => {
   const today = dayjs();
   const heightAM = dayjs().set("hour", 8).startOf("hour");
@@ -80,7 +72,6 @@ const SearchBar = ({
             <DatePicker
               views={["year", "month", "day"]}
               monthsShown={3}
-              // value={startDate}
               onChange={(newValue) => setStartDate(newValue)}
               disablePast
             />
@@ -94,8 +85,6 @@ const SearchBar = ({
               maxTime={sixPM}
               value={startDate}
               onChange={(newValue) => setStartDate(newValue)}
-
-              // onChange={onChangeStartDate}
             ></TimePicker>
           </span>
         </div>
@@ -111,7 +100,6 @@ const SearchBar = ({
               views={["hours", "minutes"]}
               ampm={false}
               timeSteps={{ minutes: 30 }}
-              // defaultValue={sixPM}
               minTime={heightAM}
               maxTime={sixPM}
               value={endDate}
@@ -124,12 +112,7 @@ const SearchBar = ({
           <button
             className="orangeButton"
             onClick={() => {
-              // setCountrytitle(countryTitle);
-              // setStartDate(startDate);
-              // setEndDate(endDate);
               setCountries([]);
-              // setTotal(total);
-              // setActive(!active);
             }}
           >
             <Link to="/offerlist">VOIR LES OFFRES</Link>

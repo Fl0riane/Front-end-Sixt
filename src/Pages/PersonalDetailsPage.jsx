@@ -31,7 +31,6 @@ const Clientdetails = ({
     <main className="container">
       <Header />
       <div className="form">
-        <h2>INFORMATIONS PERSONNELLES</h2>
         <form
           onSubmit={async (event) => {
             event.preventDefault();
@@ -78,6 +77,7 @@ const Clientdetails = ({
           }}
         >
           <div className="formulaire">
+            <h2>INFORMATIONS PERSONNELLES</h2>
             <section>
               <span className="ratio">
                 <label htmlFor="M">M.</label>
@@ -109,7 +109,7 @@ const Clientdetails = ({
                 required
               />
               <input
-                type="text"
+                type="mail"
                 placeholder="Adresse email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -144,16 +144,8 @@ const Clientdetails = ({
               />
               <span>
                 <input
-                  aria-label="code pays"
                   type="text"
-                  placeholder="+33"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Adresse email"
+                  placeholder="numero de telephone"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   required
@@ -178,8 +170,9 @@ const Clientdetails = ({
               </span>
             </section>
           </div>
-          <h2>VERIFIER ET RESERVER</h2>
+
           <div className="recap">
+            <h2>VERIFIER ET RESERVER</h2>
             <section>
               <span>
                 <span>{carDetails.headlines.description}</span>

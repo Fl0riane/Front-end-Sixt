@@ -76,12 +76,9 @@ const ConfigPage = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post(
-          "https://site--back-end-sixt--p2d7k4xwpzzq.code.run/offerconfig",
-          {
-            offerId: offerId,
-          }
-        );
+        const response = await axios.post("http://localhost:3000/offerconfig", {
+          offerId: offerId,
+        });
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -197,15 +194,21 @@ const ConfigPage = ({
                   {cart.map((option) => {
                     return (
                       <div key={option.id}>
-                        <span>{option.title}</span>
-                        <span>{option.price.amount} €</span>
+                        {`${option.title} 
+                        ${option.price.amount} €`}
                       </div>
                     );
                   })}
                 </div>
               )}
-              <h3>TOTAL</h3>
-              <h1> {total}€ </h1>
+              <h1
+                style={{
+                  fontSize: "30px",
+                  paddingTop: "10px",
+                  paddingBottom: "10px",
+                }}
+              >{`TOTAL ${total} € `}</h1>
+
               <div></div>
               <Link to="/personnaldetails">
                 <button
